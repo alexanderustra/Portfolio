@@ -1,8 +1,7 @@
-import SwipeNavigator from "./components/navegationSwipe"
 export const AboutMe = ()=>{
 
     return (
-        <div id="container">
+        <div>
             <div>
                 <h1>Alexander Ustra</h1>
                 <h3>Frond End and UX Designer</h3>
@@ -18,10 +17,6 @@ export const AboutMe = ()=>{
             </div>
             <button>Contact Me</button>
             <h4>In whatever it is, but the Best</h4>
-            <SwipeNavigator
-            onSwipeLeft={(navigate) => navigate('/contact')}
-            onSwipeRight={(navigate) => navigate('/')}
-            />
         </div>
     )
 }

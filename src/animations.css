@@ -1,0 +1,62 @@
+@keyframes textReflex {
+    0% {
+        background: linear-gradient(to right,  #FFCA7B 0%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    10% {
+        background: linear-gradient(to right, #ffffff 0%, #FFCA7B 10%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    20% {
+        background: linear-gradient(to right, #FFCA7B 0%, #ffffff 20%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    40% {
+        background: linear-gradient(to right, #FFCA7B 0%, #ffffff 40%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    60% {
+        background: linear-gradient(to right, #FFCA7B 0%, #ffffff 60%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    80% {
+        background: linear-gradient(to right, #FFCA7B 0%, #ffffff 80%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: linear-gradient(to right,  #FFCA7B 0%, #FFCA7B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+
+@keyframes loading {
+    0% {
+        left: -100%;  /* Comienza fuera de la pantalla a la izquierda */
+    }
+    50% {
+        left: 50%;  /* Se mueve hacia el centro */
+    }
+    100% {
+        left: 100%;  /* Se mueve completamente fuera de la pantalla a la derecha */
+    }
+}
+
+@keyframes moveReflect {
+    0% {
+      transform: translate(-100%, 500%); /* Empieza desde la esquina inferior izquierda */
+    }
+    50% {
+      transform: translate(100%, -500%); /* Llega a la esquina superior derecha */
+    }
+    100% {
+      transform: translate(-100%, 100%); /* Regresa a la esquina inferior izquierda */
+    }
+  }

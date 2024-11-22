@@ -1,0 +1,59 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2024-11-22 00:22:32
+count workspace : c:\Users\aleus\OneDrive\Escritorio\Portfolio v2
+total files : 32
+total code lines : 3429
+total comment lines : 80
+total blank lines : 158
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |           .cjs|             18|              0|              0|   0.52|
+   |               |             14|              9|              2|   0.41|
+   |          .html|             27|              0|              1|   0.79|
+   |            .ts|            168|             10|              7|    4.9|
+   |          .json|           2568|              2|             67|     75|
+   |           .css|            240|              0|             12|    7.0|
+   |           .tsx|            333|              5|             54|    9.7|
+   |            .sh|              8|              8|              7|   0.23|
+   |            .md|             19|              3|              8|   0.55|
+   |           .svg|              3|              0|              0|  0.087|
+   |            .js|             31|             43|              0|   0.90|
+   -------------------------------------------------------------------------
+.eslintrc.cjs, code is 18, comment is 0, blank is 0.
+.gitignore, code is 14, comment is 9, blank is 2.
+dist\assets\index-130a7ad7.js, code is 31, comment is 43, blank is 0.
+dist\assets\index-e1724b96.css, code is 1, comment is 0, blank is 0.
+dist\index.html, code is 14, comment is 0, blank is 1.
+dist\projectsData.ts, code is 69, comment is 4, blank is 3.
+dist\vite.svg, code is 1, comment is 0, blank is 0.
+index.html, code is 13, comment is 0, blank is 0.
+package-lock.json, code is 2504, comment is 0, blank is 65.
+package.json, code is 33, comment is 0, blank is 0.
+public\projectsData.ts, code is 93, comment is 4, blank is 3.
+public\vite.svg, code is 1, comment is 0, blank is 0.
+README.md, code is 19, comment is 3, blank is 8.
+src\AboutMe.tsx, code is 17, comment is 0, blank is 5.
+src\animations.css, code is 59, comment is 0, blank is 3.
+src\App.css, code is 110, comment is 0, blank is 8.
+src\App.tsx, code is 152, comment is 2, blank is 24.
+src\assets\react.svg, code is 1, comment is 0, blank is 0.
+src\components\Carousel.tsx, code is 56, comment is 3, blank is 12.
+src\components\project.module.css, code is 25, comment is 0, blank is 0.
+src\components\ProjectComponent.tsx, code is 53, comment is 0, blank is 7.
+src\components\VideoProd.tsx, code is 36, comment is 0, blank is 4.
+src\Contact.tsx, code is 10, comment is 0, blank is 1.
+src\deploy.sh, code is 8, comment is 8, blank is 7.
+src\Home.tsx, code is 0, comment is 0, blank is 0.
+src\index.css, code is 0, comment is 0, blank is 0.
+src\main.tsx, code is 9, comment is 0, blank is 1.
+src\text.css, code is 45, comment is 0, blank is 1.
+src\vite-env.d.ts, code is 0, comment is 1, blank is 0.
+tsconfig.json, code is 21, comment is 2, blank is 2.
+tsconfig.node.json, code is 10, comment is 0, blank is 0.
+vite.config.ts, code is 6, comment is 1, blank is 1.
+===============================================================================

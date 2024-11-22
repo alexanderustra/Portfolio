@@ -1,0 +1,266 @@
+{
+    "extension": "linecounter",
+    "version": "0.2.7",
+    "workspace": "c:\\Users\\aleus\\OneDrive\\Escritorio\\Portfolio v2",
+    "linecount": [
+        {
+            "version": "0.2.7",
+            "counttime": "2024-11-22 00:22:32",
+            "filesum": 32,
+            "codesum": 3429,
+            "commentsum": 80,
+            "blanksum": 158,
+            "statistics": {
+                ".cjs": {
+                    "code": 18,
+                    "comment": 0,
+                    "blank": 0
+                },
+                "": {
+                    "code": 14,
+                    "comment": 9,
+                    "blank": 2
+                },
+                ".html": {
+                    "code": 27,
+                    "comment": 0,
+                    "blank": 1
+                },
+                ".ts": {
+                    "code": 168,
+                    "comment": 10,
+                    "blank": 7
+                },
+                ".json": {
+                    "code": 2568,
+                    "comment": 2,
+                    "blank": 67
+                },
+                ".css": {
+                    "code": 240,
+                    "comment": 0,
+                    "blank": 12
+                },
+                ".tsx": {
+                    "code": 333,
+                    "comment": 5,
+                    "blank": 54
+                },
+                ".sh": {
+                    "code": 8,
+                    "comment": 8,
+                    "blank": 7
+                },
+                ".md": {
+                    "code": 19,
+                    "comment": 3,
+                    "blank": 8
+                },
+                ".svg": {
+                    "code": 3,
+                    "comment": 0,
+                    "blank": 0
+                },
+                ".js": {
+                    "code": 31,
+                    "comment": 43,
+                    "blank": 0
+                }
+            },
+            "filelist": [
+                {
+                    "blank": 0,
+                    "code": 18,
+                    "comment": 0,
+                    "filename": ".eslintrc.cjs"
+                },
+                {
+                    "blank": 2,
+                    "code": 14,
+                    "comment": 9,
+                    "filename": ".gitignore"
+                },
+                {
+                    "blank": 0,
+                    "code": 31,
+                    "comment": 43,
+                    "filename": "dist\\assets\\index-130a7ad7.js"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "dist\\assets\\index-e1724b96.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 14,
+                    "comment": 0,
+                    "filename": "dist\\index.html"
+                },
+                {
+                    "blank": 3,
+                    "code": 69,
+                    "comment": 4,
+                    "filename": "dist\\projectsData.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "dist\\vite.svg"
+                },
+                {
+                    "blank": 0,
+                    "code": 13,
+                    "comment": 0,
+                    "filename": "index.html"
+                },
+                {
+                    "blank": 65,
+                    "code": 2504,
+                    "comment": 0,
+                    "filename": "package-lock.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 33,
+                    "comment": 0,
+                    "filename": "package.json"
+                },
+                {
+                    "blank": 3,
+                    "code": 93,
+                    "comment": 4,
+                    "filename": "public\\projectsData.ts"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "public\\vite.svg"
+                },
+                {
+                    "blank": 8,
+                    "code": 19,
+                    "comment": 3,
+                    "filename": "README.md"
+                },
+                {
+                    "blank": 5,
+                    "code": 17,
+                    "comment": 0,
+                    "filename": "src\\AboutMe.tsx"
+                },
+                {
+                    "blank": 3,
+                    "code": 59,
+                    "comment": 0,
+                    "filename": "src\\animations.css"
+                },
+                {
+                    "blank": 8,
+                    "code": 110,
+                    "comment": 0,
+                    "filename": "src\\App.css"
+                },
+                {
+                    "blank": 24,
+                    "code": 152,
+                    "comment": 2,
+                    "filename": "src\\App.tsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 1,
+                    "comment": 0,
+                    "filename": "src\\assets\\react.svg"
+                },
+                {
+                    "blank": 12,
+                    "code": 56,
+                    "comment": 3,
+                    "filename": "src\\components\\Carousel.tsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 25,
+                    "comment": 0,
+                    "filename": "src\\components\\project.module.css"
+                },
+                {
+                    "blank": 7,
+                    "code": 53,
+                    "comment": 0,
+                    "filename": "src\\components\\ProjectComponent.tsx"
+                },
+                {
+                    "blank": 4,
+                    "code": 36,
+                    "comment": 0,
+                    "filename": "src\\components\\VideoProd.tsx"
+                },
+                {
+                    "blank": 1,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "src\\Contact.tsx"
+                },
+                {
+                    "blank": 7,
+                    "code": 8,
+                    "comment": 8,
+                    "filename": "src\\deploy.sh"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\Home.tsx"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 0,
+                    "filename": "src\\index.css"
+                },
+                {
+                    "blank": 1,
+                    "code": 9,
+                    "comment": 0,
+                    "filename": "src\\main.tsx"
+                },
+                {
+                    "blank": 1,
+                    "code": 45,
+                    "comment": 0,
+                    "filename": "src\\text.css"
+                },
+                {
+                    "blank": 0,
+                    "code": 0,
+                    "comment": 1,
+                    "filename": "src\\vite-env.d.ts"
+                },
+                {
+                    "blank": 2,
+                    "code": 21,
+                    "comment": 2,
+                    "filename": "tsconfig.json"
+                },
+                {
+                    "blank": 0,
+                    "code": 10,
+                    "comment": 0,
+                    "filename": "tsconfig.node.json"
+                },
+                {
+                    "blank": 1,
+                    "code": 6,
+                    "comment": 1,
+                    "filename": "vite.config.ts"
+                }
+            ]
+        }
+    ]
+}
