@@ -1,3 +1,4 @@
+import styles from './project.module.css'
 const VideoLoop = (route:string) => {
   return (
     <div style={{ width: "100%", height: "auto", overflow: "hidden" }}>
@@ -22,7 +23,7 @@ interface YouTubeEmbedProps {
   
   const YouTubeEmbed: React.FC<YouTubeEmbedProps> = ({ route }) => {
     return (
-      <div style={{ width: "100%", height: "auto", overflow: "hidden" }}>
+      <div style={{ width: "100%", height: "auto", overflow: "hidden" }} className={styles.vid}> 
         <iframe
           width="560"
           height="315"

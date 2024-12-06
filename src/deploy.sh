@@ -18,6 +18,6 @@ git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io
-# git push -f git@github.com:<alexanderustra>/<Portfolio>.git main:gh-pages
+# git push -f git@github.com:<alexanderustra>/<JDM--Component-Gallery>.git main:gh-pages
 
 cd -

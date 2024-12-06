@@ -1,0 +1,67 @@
+#aboutMe {
+    display: flex;
+    flex-wrap: wrap;
+    }
+    #infoContainer {
+        display: flex;
+    flex-wrap: nowrap;
+    }
+    #tecsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-left: 10px;
+        padding-top: 10px;
+        width: 50px;
+        height: 350px;
+    }
+    #infoLinks * {
+        margin-top: 15px;
+        margin-right: 15px;
+    }
+    #contact {
+        background-color: transparent;
+        outline: none;
+        width: 115px;
+        height: 40px;
+        font-size: 17px;
+         font-family: 'Righteous', cursive;
+        border-radius: 5px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: 17px;
+        border: 2px solid #FFCA7B;
+        box-shadow: 0px 0px 5px 0px rgba(255, 202, 123,.4);
+    }
+    #phrase {
+        margin: auto;
+        padding-left: 25px;
+        text-align: center;
+        font-size: 35px;
+        color: #FFCA7B;
+        font-family: 'Akaya Kanadaka', cursive;
+    }
+
+    @media (min-width: 768px) {
+    
+        #aboutMe {
+            padding: 0px;
+          flex-wrap: nowrap;
+            width: 100%;
+        }
+        #infoContainer {
+            margin: auto;
+           width: 40%;
+        }
+        #phraseContainer {
+            margin: auto;
+            width: 50%;
+            padding: 0px;
+            margin-top: 50px;
+        }
+      }

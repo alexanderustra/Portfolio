@@ -3,13 +3,16 @@ import { Contact } from './Contact';
 import { AboutMe } from './AboutMe';
 import { useEffect, useState} from 'react';
 import './App.css';
+import './desktop.css'
 
 import { Project, ProjectInfo } from './components/ProjectComponent';
+import { Cat } from './components/Cat';
 
 function App() {
   
   const [showLoading,setShowLoading] = useState(false)
   const [activeView, setActiveView] = useState(0);
+  const [language,setLanguage] = useState('Es')
   
 
   const LoadingScreen = ()=>{
@@ -36,7 +39,7 @@ const NavigationMenu = ()=>{
     if (activeView === 2) setText({ top: '', right: '', bottom: '', left: 'About Me' });
     if (activeView === 3) setText({ top: 'Home', right: 'Project Info', bottom: 'Next', left: '' });
     if (activeView > 3) setText({ top: 'Previus', right: 'Project Info', bottom: 'Next', left: '' });
-    if (activeView === 4 || activeView === 6 || activeView === 8) setText({ top: '', right: '', bottom: '', left: 'Back' });
+    if (activeView === 4 || activeView === 6 || activeView === 8) setText({ top: '', right: '', bottom: '', left: '' });
     if (activeView === 7) setText({ top: 'Previus', right: 'Project Info', bottom: 'Home', left: '' });
   }, [activeView]);
 
@@ -44,7 +47,7 @@ const NavigationMenu = ()=>{
       <div id='navigationMenu'>
         <h4 id='top'>{text.top}</h4>
         <h4 id='right'>{text.right}</h4>
-        <div id='circle'></div>
+        <div id='circle' style={activeView === 4 || activeView === 6 || activeView === 8 ? {display:'none'} : {display:'flex'}}></div>
         <h4 id='bottom'>{text.bottom}</h4>
         <h4 id='left'>{text.left}</h4>
       </div>
@@ -52,57 +55,76 @@ const NavigationMenu = ()=>{
   }
 
   const Home = ()=>{
+    const textEs = {
+      work:'Mis Trabajos',
+      about: 'Sobre Mi',
+      contact: 'Contacto'
+    }
+    const textEn = {
+      work:'My Work',
+      about: 'About Me',
+      contact: 'Contact'
+    }
+    const textToUse = language === 'Es' ? textEs : textEn
     return (
       <>
-        <div>
-            <h3>En</h3>
-            <h3>Es</h3>
+        <div id='languageContainer'>
+          <h3 onClick={()=>setLanguage('Es')} className={language === 'Es' ? 'active' : ''}>Es</h3>
+          <h3 onClick={()=>setLanguage('En')} className={language === 'En'? 'active' : ''}>En</h3>
         </div>
-        <button className="homeBtn" onClick={() => {
-          setTimeout(() => {
-            setActiveView(3);
-          }, 200);
-          }}>My Work</button>
-        <button className="homeBtn" onClick={() => {
-          setTimeout(() => {
-            setActiveView(1);
-          }, 200);
-          }}>About Me</button>
-        <button className="homeBtn" onClick={() => {
-          setTimeout(() => {
-            setActiveView(2);
-          }, 200);
-          }}>Contact</button>
+        <div id='homeContainer'>
+          <button className="homeBtn" onClick={() => {
+            setTimeout(() => {
+              setActiveView(3);
+            }, 200);
+            }}>{textToUse.work}</button>
+          <button className="homeBtn" onClick={() => {
+            setTimeout(() => {
+              setActiveView(1);
+            }, 200);
+            }}>{textToUse.about}</button>
+          <button className="homeBtn" onClick={() => {
+            setTimeout(() => {
+              setActiveView(2);
+            }, 200);
+            }}>{textToUse.contact}</button>
+        </div>
+          <Cat />
       </>
     )
   }
+
+  useEffect(()=>{
+    localStorage.setItem('language',language)
+  },[language])
 
   const renderView = () => {
     switch (activeView) {
       case 0:
         return <Home/> ;
       case 1:
-        return <AboutMe/>;
+        return <AboutMe onContactClick = {()=>setActiveView(2)} language={language}/>;
       case 2:
-        return <Contact />;
+        return <Contact  language={language} />;
       case 3:
-        return <Project id={0} />;
+        return <Project id={0} language={language} />;
       case 4:
-        return<ProjectInfo id={0}/> ;
+        return<ProjectInfo id={0} language={language}/> ;
       case 5 : 
-        return <Project id={1} />;
+        return <Project id={1} language={language} />;
       case 6:
-        return<ProjectInfo id={1}/> ;
+        return<ProjectInfo id={1} language={language}/> ;
       case 7:
-        return<Project id={2}/> ;
+        return<Project id={2} language={language}/> ;
       case 8:
-        return<ProjectInfo id={2}/> ;
+        return<ProjectInfo id={2} language={language}/> ;
       default:
         return <Home/>;
     }
   };
 
   const swipeLeft = () => {
+    if (activeView === 2) return
     setTimeout(() => {
       setActiveView((prev) => {
         if (activeView === 4 || activeView === 6 || activeView === 8) return prev
@@ -120,7 +142,7 @@ const NavigationMenu = ()=>{
   };
   
   const swipeDown = () => {
-    if (activeView === 4 || activeView === 6 || activeView === 8) return; // Bloquea swipeDown
+    if (activeView === 1 ||activeView === 2 || activeView === 4 || activeView === 6 || activeView === 8) return; 
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 0;
@@ -132,7 +154,7 @@ const NavigationMenu = ()=>{
   };
   
   const swipeUp = () => {
-    if (activeView === 4 || activeView === 6 || activeView === 8) return; // Bloquea swipeUp
+    if (activeView === 1 ||activeView === 2 || activeView === 4 || activeView === 6 || activeView === 8) return; 
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 3;
@@ -167,7 +189,7 @@ const NavigationMenu = ()=>{
   });
 
   return (
-    <div id="container"  {...handlers}>
+    <div id={activeView === 0 || activeView === 1 || activeView === 2 ? 'container' : 'projectContainer'}  {...handlers}>
       {showLoading && <LoadingScreen/>}
        {renderView()}
       { !showLoading && <NavigationMenu/>}
