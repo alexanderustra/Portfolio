@@ -51,12 +51,10 @@ export const AboutMe: React.FC<AboutMeProps> = ({ onContactClick ,language}) => 
 
                 <p>aleustrsa2004@gmail.com</p>
                 <div id="infoLinks">
-                    <a  href="/Alexander_Ustra_CV.pdf" target="_blank" ><CvSvg/></a>
+                    <a href="/Alexander_Ustra_CV-d.pdf" target="_blank"><CvSvg/></a>
                     <a href="https://www.linkedin.com/in/alexander-ustra" target="_blank"><LinkedinSvg/></a>
                     <a href="https://github.com/alexanderustra"><GitSvg/></a>
                 </div>
-           
-            
             </div>
             <div id="tecsContainer">
                 <JavaScriptSvg/>

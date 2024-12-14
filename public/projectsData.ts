@@ -128,7 +128,7 @@ export const projectDataEs: Project[] = [
             caracteristics: [
                 {
                     name: "Rutinas",
-                    img: "./src/assets/routine.png",
+                    img: "/imgs/routine.png",
                     description: "Crea rutinas añadiendo actividades con descripción y hora límite. Actualiza su estado como pendiente, completada o no completada."
                 },
                 {
