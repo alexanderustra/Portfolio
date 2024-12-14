@@ -10,6 +10,7 @@ interface ProjectDataDetail {
     page: string;
     github: string;
     tecs: string[];
+    images:string[]
     description: string;
     vid: string;
     caracteristics: ProjectCharacteristic[];
@@ -28,13 +29,14 @@ export const projectDataEn: Project[] = [
     {
         id: 0,
         name: "Time Management App",
-        img: "https://i.pinimg.com/736x/d1/f7/40/d1f740d0cab7f74d94ba5209a8ec06c6.jpg",
+        img: "./src/assets/todoHome.png",
         data: {
             page: "https://alexanderustra.github.io/Time-Management-App/",
             github: "https://github.com/alexanderustra/Time-Management-App",
             tecs: ["typescript", "react", "css"],
             description: "Optimize your daily routines and activities with multiple features in one place.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Routines",
@@ -62,13 +64,14 @@ export const projectDataEn: Project[] = [
     {
         id: 1,
         name: "Restaurant Website",
-        img: "https://i.pinimg.com/736x/e7/53/fb/e753fb46e78f27d89c64c09b8d238fc4.jpg",
+        img: "./src/assets/restaurant.png",
         data: {
             page: "https://github.com/alexanderustra/aleustra-portafolio",
             github: "https://github.com/alexanderustra/aleustra-portafolio",
             tecs: ["typescript", "react", "css"],
             description: "A restaurant website simulation featuring reservations, delivery, discounts, and a shopping cart.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Reservations",
@@ -91,13 +94,14 @@ export const projectDataEn: Project[] = [
     {
         id: 2,
         name: "Montevideo Danger",
-        img: "https://i.pinimg.com/736x/28/24/28/282428f5e7e31aa1a75cbb137e2f5eea.jpg",
+        img: "./src/assets/montevideoDanger.png",
         data: {
             page: "https://alexanderustra.github.io/MontevideoDanger/",
             github: "https://github.com/alexanderustra/MontevideoDanger",
             tecs: ["typescript", "react", "css", "javascript","api"],
             description: "A webpage dividing Montevideo into zones based on danger levels using official data.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Map",
@@ -113,13 +117,14 @@ export const projectDataEs: Project[] = [
     {
         id: 0,
         name: "App de Gestión del Tiempo",
-        img: "https://i.pinimg.com/736x/d1/f7/40/d1f740d0cab7f74d94ba5209a8ec06c6.jpg",
+        img: "./src/assets/todoHome.png",
         data: {
             page: "https://alexanderustra.github.io/Time-Management-App/",
             github: "https://github.com/alexanderustra/Time-Management-App",
             tecs: ["typescript", "react", "css"],
             description: "Optimiza tus rutinas y actividades diarias con múltiples funciones en un solo lugar.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Rutinas",
@@ -148,13 +153,14 @@ export const projectDataEs: Project[] = [
     {   
         id:1,
         name: "Web de Restaurante",
-        img: "https://i.pinimg.com/736x/e7/53/fb/e753fb46e78f27d89c64c09b8d238fc4.jpg",
+        img: "./src/assets/restaurant.png",
         data: {
             page: "https://github.com/alexanderustra/aleustra-portafolio",
             github: "https://github.com/alexanderustra/aleustra-portafolio",
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Reservas",
@@ -177,13 +183,14 @@ export const projectDataEs: Project[] = [
     {
         id: 2,
         name: "Montevideo Danger",
-        img: "https://i.pinimg.com/736x/28/24/28/282428f5e7e31aa1a75cbb137e2f5eea.jpg",
+        img: "./src/assets/montevideoDanger.png",
         data: {
             page: "https://alexanderustra.github.io/MontevideoDanger/",
             github: "https://github.com/alexanderustra/MontevideoDanger",
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Página que divide Montevideo en zonas de peligrosidad según datos oficiales.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
+            images:['./src/assets/routine.png','./src/assets/Todo.png','./src/assets/notes.png'],
             caracteristics: [
                 {
                     name: "Mapa",
