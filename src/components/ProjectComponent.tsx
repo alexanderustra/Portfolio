@@ -1,5 +1,6 @@
 import {projectDataEn} from '../../public/projectsData'
 import {projectDataEs} from '../../public/projectsData'
+import ImageCarousel from './Carousel';
 import styles from './project.module.css'
 //import { YouTubeEmbed } from './VideoProd';
 import { ApiSvg, CssSvg, FigmaSvg, JavaScriptSvg, ReactSvg, TypeScriptSvg } from './Svgs';
@@ -22,11 +23,9 @@ const Project:React.FC<ProjectProps> = ({ id }) =>{
     }
 
     return (
-        <div className={styles.projectTitleContainer} 
-        style={{backgroundImage: `url(${info.img})`,
-        backgroundSize: 'cover',  
-        backgroundPosition: 'center',}}>
+        <div className={styles.projectTitleContainer} >
                 <h2>{info?.name}</h2>
+                <img src={`${info.img}`} alt="" />
         </div>
     )
 }
@@ -85,7 +84,7 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
                     <a href={info.data.page}  target='_blank'>{localStorage.getItem('language') === 'Es' ? 'Página' : 'Page'}</a>
                     <a  href={info.data.github} target='_blank'>Github</a>
                 </div>
-                <img src="https://i.pinimg.com/736x/4c/e4/6b/4ce46b2b250c4675e6b02b506a5f520c.jpg" alt="" className={styles.img} />
+                <ImageCarousel interval={2000} images={info.data.images}/> 
                 </div>
                 <ul>
                 {info.data.caracteristics.map((caracteristic,index) => (

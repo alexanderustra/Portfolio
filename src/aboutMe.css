@@ -21,9 +21,13 @@
         margin-top: 15px;
         margin-right: 15px;
     }
+    #infoLinks :hover {
+        filter: drop-shadow(#FFCA7B);
+    }
     #contact {
         background-color: transparent;
         outline: none;
+        padding-bottom: 3px;
         width: 115px;
         height: 40px;
         font-size: 17px;
@@ -37,6 +41,15 @@
         margin-left: 17px;
         border: 2px solid #FFCA7B;
         box-shadow: 0px 0px 5px 0px rgba(255, 202, 123,.4);
+        transition: .3s;
+    }
+    #contact:hover {
+        font-size: 19px;
+        padding-bottom: 0px;
+        background-color: #FFCA7B;
+    }
+    #contact:active {
+        animation: contactBtn .3s linear;
     }
     #phrase {
         margin: auto;
@@ -46,7 +59,22 @@
         color: #FFCA7B;
         font-family: 'Akaya Kanadaka', cursive;
     }
-
+    #author {
+        margin-top: 0px;
+        margin-left: 500px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        animation: showAuthor .3s;
+    }
+    @keyframes showAuthor {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        } 
+    }
     @media (min-width: 768px) {
     
         #aboutMe {

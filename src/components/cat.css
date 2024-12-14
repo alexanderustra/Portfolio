@@ -17,6 +17,7 @@
   border-radius: 5px;
   border: 1px solid #FFCA7B;
   animation: enter .4s ease-out ;
+  background: linear-gradient(to right, #323232 0%, #1B1B1B 100%)
 }
 .abbaModal h3 , .abbaModalOff h3{
   font-size: 22px;
@@ -30,32 +31,7 @@
   top: -15%;
 animation: out .3s ;
 }
-@keyframes enter {
-  0% {
-    top: -15%;
-  }
-  50% {
-    top: 7%;
-    transform: scaleY(0.8);
-    left: 5%;
-  }
-  80% {
-    
-    top: 5%;
-  }
-  100%{
-    top: 7%;
-  }
-}
 
-@keyframes out{
-  0% {
-    top: 7%;
-  }
-  100%{
-    top: -15%;
-  }
-}
 /*--------------------------------*/
 .catColor {
 	/*This universally changes the colour of the cat. For multi-coloured cats, delete it and apply background-color to components individually*/

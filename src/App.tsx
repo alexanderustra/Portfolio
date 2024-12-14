@@ -3,17 +3,32 @@ import { Contact } from './Contact';
 import { AboutMe } from './AboutMe';
 import { useEffect, useState} from 'react';
 import './App.css';
-import './desktop.css'
 
 import { Project, ProjectInfo } from './components/ProjectComponent';
 import { Cat } from './components/Cat';
 
 function App() {
-  
+  const initialView = parseInt(localStorage.getItem('activeView') || '0', 10);
   const [showLoading,setShowLoading] = useState(false)
-  const [activeView, setActiveView] = useState(0);
+  const [activeView, setActiveView] = useState(initialView);
   const [language,setLanguage] = useState('Es')
-  
+
+  useEffect(()=>{
+    localStorage.setItem('language',language)
+  },[language])
+
+  useEffect(() => {
+    localStorage.setItem('activeView', JSON.stringify(activeView))
+    if(activeView > 8 ) {
+      setActiveView(0)
+    }
+    setShowLoading(true); 
+    const timeout = setTimeout(() => {
+      setShowLoading(false); 
+    }, 400);
+
+    return () => clearTimeout(timeout); 
+  }, [activeView]);
 
   const LoadingScreen = ()=>{
 
@@ -26,6 +41,29 @@ function App() {
 
 const NavigationMenu = ()=>{
 
+  const textEs = {
+    aboutMe:'Sobre Mi',
+    myWork: 'Proyectos',
+    contact: 'Contacto',
+    home:'Inicio',
+    previus:'Anterior',
+    projectInfo:'Descripción',
+    next:'Siguiente',
+    back:'Atrás'
+  }
+  const textEn = {
+    aboutMe:'About Me',
+    myWork: 'My Work',
+    contact: 'Contact',
+    home:'Home',
+    previus:'Previus',
+    projectInfo:'Project Info',
+    next:'Next',
+    back:'Back'
+  }
+
+  const textToUse = language === 'Es' ? textEs : textEn
+
   const [text,setText] = useState({
     top:'',
     right:'',
@@ -34,22 +72,22 @@ const NavigationMenu = ()=>{
 
   })
   useEffect(() => {
-    if (activeView === 0) setText({ top: '', right: 'About Me', bottom: 'My Work', left: '' });
-    if (activeView === 1) setText({ top: '', right: 'Contact', bottom: '', left: 'Home' });
-    if (activeView === 2) setText({ top: '', right: '', bottom: '', left: 'About Me' });
-    if (activeView === 3) setText({ top: 'Home', right: 'Project Info', bottom: 'Next', left: '' });
-    if (activeView > 3) setText({ top: 'Previus', right: 'Project Info', bottom: 'Next', left: '' });
-    if (activeView === 4 || activeView === 6 || activeView === 8) setText({ top: '', right: '', bottom: '', left: '' });
-    if (activeView === 7) setText({ top: 'Previus', right: 'Project Info', bottom: 'Home', left: '' });
+    if (activeView === 0) setText({ top: '', right: textToUse.aboutMe, bottom: textToUse.myWork, left: '' });
+    if (activeView === 1) setText({ top: '', right: textToUse.contact, bottom: '', left: textToUse.home });
+    if (activeView === 2) setText({ top: '', right: '', bottom: '', left: textToUse.aboutMe });
+    if (activeView === 3) setText({ top: textToUse.home, right: textToUse.projectInfo, bottom: textToUse.next, left: '' });
+    if (activeView > 3) setText({ top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.next, left: '' });
+    if (activeView === 4 || activeView === 6 || activeView === 8) setText({ top: '', right: '', bottom: '', left: textToUse.back });
+    if (activeView === 7) setText({ top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.home, left: '' });
   }, [activeView]);
 
     return (
-      <div id='navigationMenu'>
-        <h4 id='top'>{text.top}</h4>
-        <h4 id='right'>{text.right}</h4>
-        <div id='circle' style={activeView === 4 || activeView === 6 || activeView === 8 ? {display:'none'} : {display:'flex'}}></div>
-        <h4 id='bottom'>{text.bottom}</h4>
-        <h4 id='left'>{text.left}</h4>
+      <div id='navigationMenu' className={activeView === 0 ? 'homeNavigationMenu' : ''}>
+        <h4 id='top' onClick={swipeDown}>{text.top}</h4>
+        <h4 id='right' onClick={swipeLeft}>{text.right}</h4>
+        <div id='circle' onClick={()=>setActiveView(0)}></div>
+        <h4 id='bottom' onClick={swipeUp}>{text.bottom}</h4>
+        <h4 id='left' onClick={swipeRight}>{text.left}</h4>
       </div>
     )
   }
@@ -69,8 +107,8 @@ const NavigationMenu = ()=>{
     return (
       <>
         <div id='languageContainer'>
-          <h3 onClick={()=>setLanguage('Es')} className={language === 'Es' ? 'active' : ''}>Es</h3>
-          <h3 onClick={()=>setLanguage('En')} className={language === 'En'? 'active' : ''}>En</h3>
+          <h3 onClick={()=>setLanguage('Es')} className={language === 'Es' ? 'active' : 'languageBtn'}>Es</h3>
+          <h3 onClick={()=>setLanguage('En')} className={language === 'En'? 'active' : 'languageBtn'}>En</h3>
         </div>
         <div id='homeContainer'>
           <button className="homeBtn" onClick={() => {
@@ -93,10 +131,6 @@ const NavigationMenu = ()=>{
       </>
     )
   }
-
-  useEffect(()=>{
-    localStorage.setItem('language',language)
-  },[language])
 
   const renderView = () => {
     switch (activeView) {
@@ -162,23 +196,6 @@ const NavigationMenu = ()=>{
       });
     }, 200);
   };
-  
-  
-  useEffect(() => {
-    if(activeView > 8 ) {
-      setActiveView(0)
-    }
-    setShowLoading(true); 
-    const timeout = setTimeout(() => {
-      setShowLoading(false); 
-    }, 400);
-
-    return () => clearTimeout(timeout); 
-  }, [activeView]);
-
-  if (location.pathname !== "/") {
-    return null;
-  }
 
   const handlers = useSwipeable({
     onSwipedLeft: () => swipeLeft(),
@@ -186,6 +203,8 @@ const NavigationMenu = ()=>{
     onSwipedUp: () => swipeUp(),
     onSwipedDown: () => swipeDown(),
     preventScrollOnSwipe: true, 
+    trackMouse: true, 
+    trackTouch: true 
   });
 
   return (

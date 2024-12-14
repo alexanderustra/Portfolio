@@ -1,5 +1,6 @@
 import { ApiSvg, AstroSvg, CssSvg, CvSvg, FigmaSvg, GitSvg, JavaScriptSvg, LinkedinSvg, ReactSvg, TypeScriptSvg } from "./components/Svgs"
 import './aboutMe.css'
+import { useState } from "react";
 
 interface AboutMeProps {
     language: string
@@ -30,6 +31,7 @@ const textEn = {
 }
 
 export const AboutMe: React.FC<AboutMeProps> = ({ onContactClick ,language}) => {
+    const [showAuthor,setShowAuthor] = useState(false)
 
     const textToUse = language === 'Es' ? textEs : textEn
 
@@ -68,7 +70,8 @@ export const AboutMe: React.FC<AboutMeProps> = ({ onContactClick ,language}) => 
             </div>
             <div id="phraseContainer">
                 <button id="contact" onClick={onContactClick}>{textToUse.button}</button>
-                <h4 id="phrase">{textToUse.phrase}</h4>
+                <h4 id="phrase" onMouseOver={()=>setShowAuthor(true)} onMouseOut={()=>setShowAuthor(false)}>{textToUse.phrase}</h4>
+                {showAuthor && <p id="author">Nach</p>}
             </div>
         </div>
     )

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './cat.css'
+import '../animations.css'
 
 export const Cat = ()=> {
     const [modal,setModal] = useState(false)

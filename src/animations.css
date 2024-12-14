@@ -5,7 +5,7 @@
         -webkit-text-fill-color: transparent;
     }
     10% {
-        background: linear-gradient(to right, #ffffff 0%, #FFCA7B 10%, #ffffff 100%);
+        background: linear-gradient(to right, #FFCA7B 0%, #ffffff 0%, #FFCA7B 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -36,6 +36,48 @@
     }
 }
 
+@keyframes textReflexOnWhite {
+    0% {
+        background: linear-gradient(to right,  #ffffff 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    10% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    20% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 20%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    40% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 40%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    60% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 60%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    80% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 80%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    90% {
+        background: linear-gradient(to right,  #ffffff 0% , #FFCA7B 100%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    100% {
+        background: linear-gradient(to right,  #ffffff 0%, #ffffff 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }    
+}
 
 @keyframes loading {
     0% {
@@ -58,5 +100,59 @@
     }
     100% {
       transform: translate(-100%, 100%); /* Regresa a la esquina inferior izquierda */
+    }
+  }
+
+@keyframes contactBtn {
+    0% {
+        width: 100px;
+        height: 30px;
+      }
+      50% {
+        width: 130px;
+        height: 50px; 
+      }
+      100% {
+        width: 115px;
+        height: 40px;
+      }
+}
+
+@keyframes menuItems {
+    0% {
+        text-shadow:none;
+    }
+    50% {
+        text-shadow: 1px 1px 10px #FFCA7B; 
+    }
+    100% {
+        text-shadow:none;
+    }
+  }
+
+  @keyframes enter {
+    0% {
+      top: -15%;
+    }
+    50% {
+      top: 7%;
+      transform: scaleY(0.8);
+      left: 5%;
+    }
+    80% {
+      
+      top: 5%;
+    }
+    100%{
+      top: 7%;
+    }
+  }
+  
+  @keyframes out{
+    0% {
+      top: 7%;
+    }
+    100%{
+      top: -15%;
     }
   }

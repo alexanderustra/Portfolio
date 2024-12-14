@@ -1,18 +1,20 @@
 import { useState } from "react";
-//import emailjs from 'emailjs-com';
-
+import emailjs from 'emailjs-com';
+import './animations.css'
 interface ContactProps {
   language: string
 }
 const textEs = {
   title:'Contacto',
   texarea: 'Mensaje',
-  button: 'Enviar'
+  button: 'Enviar',
+  confirmation:'Se ha enviado el Mensaje'
 }
 const textEn = {
   title:'Contact',
   texarea: 'Mesagge',
-  button: 'Send'
+  button: 'Send',
+  confirmation:'Message has been sended'
 }
 
 export const Contact: React.FC<ContactProps> = ({language}) => {
@@ -32,7 +34,6 @@ export const Contact: React.FC<ContactProps> = ({language}) => {
         });
       };
       
-      /*
       const handleSubmit = (e:any) => {
         e.preventDefault();
     
@@ -49,19 +50,38 @@ export const Contact: React.FC<ContactProps> = ({language}) => {
           .then(
             (result) => {
               console.log('Correo enviado con éxito:', result.text);
-              alert('Mensaje enviado con éxito');
+              setModal(true)
+              setInitialized(true)
             },
             (error) => {
               console.log('Error al enviar el correo:', error.text);
-              alert('Hubo un error al enviar el mensaje');
             }
           );
       };
-    */
+      
+      const [modal,setModal] = useState(false)
+      const [initialized,setInitialized] = useState(false)
+  
+      const Modal = ()=> {
+        setTimeout(()=>{
+          setModal(false)
+        },1500)
+          return (
+              <div className={!initialized
+                  ? "confirmationModalHidden"
+                  : modal
+                  ? "confirmationModal"
+                  : "confirmationModalOff"} onClick={()=>setModal(false)}>
+                  <h3>{textToUse.confirmation}</h3>
+              </div>
+          )
+      }
       return (
-        <form>
+        <form onSubmit={handleSubmit}>
+          <Modal/>
           <h1>{textToUse.title}</h1>
           <input
+            required
             type="email"
             name="email"
             placeholder="Email"
@@ -69,6 +89,7 @@ export const Contact: React.FC<ContactProps> = ({language}) => {
             onChange={handleChange}
           />
           <textarea
+            required
             name="message"
             id="message"
             placeholder={textToUse.texarea}
