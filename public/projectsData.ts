@@ -36,7 +36,7 @@ export const projectDataEn: Project[] = [
             tecs: ["typescript", "react", "css"],
             description: "Optimize your daily routines and activities with multiple features in one place.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Routines",
@@ -45,7 +45,7 @@ export const projectDataEn: Project[] = [
                 },
                 {
                     name: "ToDo",
-                    img: "/imgs/Todo.png",
+                    img: "/imgs/ToDo.png",
                     description: "A classic ToDo list to organize your tasks with the option to mark them as completed. Future updates will include tracking time spent on tasks."
                 },
                 {
@@ -71,7 +71,7 @@ export const projectDataEn: Project[] = [
             tecs: ["typescript", "react", "css"],
             description: "A restaurant website simulation featuring reservations, delivery, discounts, and a shopping cart.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Reservations",
@@ -101,7 +101,7 @@ export const projectDataEn: Project[] = [
             tecs: ["typescript", "react", "css", "javascript","api"],
             description: "A webpage dividing Montevideo into zones based on danger levels using official data.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Map",
@@ -124,7 +124,7 @@ export const projectDataEs: Project[] = [
             tecs: ["typescript", "react", "css"],
             description: "Optimiza tus rutinas y actividades diarias con múltiples funciones en un solo lugar.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Rutinas",
@@ -133,7 +133,7 @@ export const projectDataEs: Project[] = [
                 },
                 {
                     name: "ToDo",
-                    img: "/imgs/Todo.png",
+                    img: "/imgs/ToDo.png",
                     description: "Un clásico ToDo para organizar tus tareas con opción de marcarlas como completadas. Planeo añadir registro de tiempo dedicado."
                 },
                 {
@@ -160,7 +160,7 @@ export const projectDataEs: Project[] = [
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Reservas",
@@ -190,7 +190,7 @@ export const projectDataEs: Project[] = [
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Página que divide Montevideo en zonas de peligrosidad según datos oficiales.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
-            images:['/imgs/booking.png','/imgs/Todo.png','/imgs/notes.png'],
+            images:['/imgs/booking.png','/imgs/ToDo.png','/imgs/notes.png'],
             caracteristics: [
                 {
                     name: "Mapa",
