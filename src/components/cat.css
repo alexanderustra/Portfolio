@@ -17,7 +17,8 @@
   border-radius: 5px;
   border: 1px solid #FFCA7B;
   animation: enter .4s ease-out ;
-  background: linear-gradient(to right, #323232 0%, #1B1B1B 100%)
+  background: linear-gradient(to right, #323232 0%, #1B1B1B 100%);
+  z-index: 9999999;
 }
 .abbaModal h3 , .abbaModalOff h3{
   font-size: 22px;
