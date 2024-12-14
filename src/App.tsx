@@ -34,7 +34,7 @@ function App() {
 
     return (
       <div id='loadingScreen' >
-        <div id='reflex'>a</div>
+        <div id='reflex'></div>
       </div>
     )
   }
