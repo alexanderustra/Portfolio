@@ -22,6 +22,8 @@ h1 {
 }
 h2 , .homeBtn{
     font-family: 'Righteous', cursive;
+    margin-top: 10px;
+    margin-bottom: 30px;
     font-size: 60px;
     border: none;
     background-color: transparent;

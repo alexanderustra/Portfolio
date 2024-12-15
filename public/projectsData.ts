@@ -66,8 +66,8 @@ export const projectDataEn: Project[] = [
         name: "Restaurant Website",
         img: "/imgs/restaurant.png",
         data: {
-            page: "https://github.com/alexanderustra/aleustra-portafolio",
-            github: "https://github.com/alexanderustra/aleustra-portafolio",
+            page: "https://alexanderustra.github.io/Reservation-App/",
+            github: "https://github.com/alexanderustra/Reservation-App",
             tecs: ["typescript", "react", "css"],
             description: "A restaurant website simulation featuring reservations, delivery, discounts, and a shopping cart.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",
@@ -155,8 +155,8 @@ export const projectDataEs: Project[] = [
         name: "Web de Restaurante",
         img: "/imgs/restaurant.png",
         data: {
-            page: "https://github.com/alexanderustra/aleustra-portafolio",
-            github: "https://github.com/alexanderustra/aleustra-portafolio",
+            page: "https://alexanderustra.github.io/Reservation-App/",
+            github: "https://github.com/alexanderustra/Reservation-App",
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
             vid: "https://www.youtube.com/embed/xtosVrIcCyM",

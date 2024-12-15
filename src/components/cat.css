@@ -41,7 +41,7 @@ animation: out .3s ;
 
 .catContainer {
 	position: absolute;
-	top: -25%;
+	top: -12%;
 	right: 15%;
     transform: rotate(90deg);
 }
