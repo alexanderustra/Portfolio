@@ -128,6 +128,13 @@ const NavigationMenu = ()=>{
             }}>{textToUse.contact}</button>
         </div>
           <Cat />
+        <div id='slideAnimationDiv'>
+          <div id='topLine'>a</div>
+          <div id='rightLine'>a</div>
+            <h3 id='text'>Slide</h3>
+          <div id='bottomLine'>a</div>
+          <div id='leftLine'>a</div>
+        </div>
       </>
     )
   }
