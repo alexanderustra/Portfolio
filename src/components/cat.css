@@ -334,3 +334,8 @@ span:nth-child(15){
       right: 100%;
   }
 }
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+  .catContainer {
+      opacity: 0;
+  }
+}

@@ -165,7 +165,7 @@ scale: 1.2;
 
 #slideAnimationDiv {
     position: absolute;
-    top: 71%;
+    top: 74%;
     left: 65%;
     transform:translate(-50%);
 }
@@ -176,43 +176,49 @@ scale: 1.2;
     color: transparent;
     display: block;
     width: 10px;
-    height: 10px;
+    height: 15px;
     z-index: 1;
-    opacity: .7;
+    opacity: 1;
+    text-align: center;
     background-color: #FFFFFF;
+    font-weight: 800;
+    font-size: 12px;
+    box-shadow: 0px 0px 4px #FFFFFF;
+    border-radius: 20px;
 }
 #topLine {
-    top:20px;
+    top:10px;
     left: 10px;
-    border-radius: 0px 5px 5px 0px;
     transform: rotate(-90deg);
-    animation: slideMoveTop 1s infinite , slideGrow 1s infinite;
+    animation: slideMoveTop 1.5s infinite  ease-in-out , slideGrow 1.5s infinite ease-in-out; 
 }
 #rightLine {
-    border-radius: 0px 5px 5px 0px;
-     animation: slideGrow 1s infinite,slideMoveRight 1s infinite;
-    top: 34px;
-    left: 40px;
+    animation: slideGrow 1.5s infinite  ease-in-out,slideMoveRight 1.5s infinite ease-in-out; 
+    top: 0px;
+    left:20px;
 }
 #bottomLine {
-     border-radius: 0px 5px 5px 0px;
-      animation: slideGrow 1s infinite,slideMoveBottom 1s infinite;
-    top: 10px;
+    animation: slideGrow 1.5s infinite  ease-in-out,slideMoveBottom 1.5s infinite ease-in-out;
+    top: -10px;
     left: 10px;
     rotate: 90deg;
 }
 #leftLine {
-     border-radius: 5px 0px 0px 5px;
-      animation: slideGrow 1s infinite,slideMoveLeft 1s infinite;
-    top: -25px;
-    right: 20px;
+    animation: slideGrow 1.5s infinite  ease-in-out,slideMoveLeft 1.5s infinite ease-in-out;
+    top: -30px;
+    right: 0px;
 }
 #text {
+    font-size: 17px;
     width: 20px;
-    left: 20px;
-    position: relative;
+    position: absolute;
+    left: -7px;
+    bottom: 27px;
+    font-family: 'Lato', sans-serif;
     opacity: 0;
-   /* animation: showText 1s infinite;*/
+    letter-spacing: .5px;
+    color: #FFFFFF;
+    animation: showText 1s infinite;
 }
 
 /*----------------MODAL----------------*/
@@ -250,8 +256,10 @@ scale: 1.2;
   }
   
   @media (min-width: 768px) {
+    #slideAnimationDiv  {
+        top: 45%;
+    }
     #container {
-      
         padding: 20%;
         padding-top:200px ;
     }
@@ -271,8 +279,22 @@ scale: 1.2;
         width: fit-content;
     }
   }
+  @media only screen and (max-width: 375px) and (max-height: 667px) {
+    #container {
+        padding: 20px;
+        padding-top: 100px; 
+    }
+    #slideAnimationDiv {
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #catContainer {
+        opacity: 0;
+    }
+  }
   
-  @media screen and (max-width: 1360px) and (max-height: 720px) {
+  @media screen and (min-width: 1024px) and (max-width: 1360px) and (max-height: 720px) {
     
     #projectContainer {
         padding: 0px;

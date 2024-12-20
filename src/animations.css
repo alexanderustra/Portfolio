@@ -160,57 +160,65 @@
 
 @keyframes slideGrow {
   0% {
-    width: 0px;
-    opacity: 0;
+    width: 10px;
+    opacity: 1;
+    color: transparent;
   }
   50% {
+    color: rgb(60, 60, 60);
     width: 70px;
     opacity: 1;
   }
   100% {
-    width: 20px;
+    width:0px;
     opacity: 0;
+    color: transparent;
   }
 }
 @keyframes slideMoveTop {
   0% {
-    top: 20px;
+    top: 10px;
   }
   100% {
-    top: -30px;
+    top: -80px;
   }
 }
 @keyframes slideMoveBottom {
   0% {
-    top: 10px;
+    top: -10px;
   }
   100% {
-    top: 60px;
+    top: 80px;
   }
 }
 @keyframes slideMoveRight {
   0% {
-    left: 40px;
+    left: 20px;
   }
   100% {
-    left: 90px;
+    left: 110px;
   }
 }
 @keyframes slideMoveLeft {
   0% {
-    right: 20px;
+    right: 0px;
   }
   100% {
-    right: 70px;
+    right: 90px;
   }
 }
+
 @keyframes showText {
   0% {
     opacity: 0;
-    left: 0px;
+    left: -7px;
+  }
+  50% {
+    opacity: 0;
+    left: 26px;
   }
   100% {
-    opacity: 1;
-    left: 30px;
+    opacity: 0;
+    left: 0px;
   }
 }
