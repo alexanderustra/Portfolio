@@ -24,7 +24,7 @@ interface Project {
 }
 const projectImages = {
     timeManagement: {
-        carousel:['/imgs/man/todoHome.png','/imgs/man/routine.png','/imgs/man/clock.png'],
+        carousel:['/imgs/man/todoHome.png','/imgs/man/routine.png','/imgs/rest/restaurant.webp'],
         home: "/imgs/man/todoHome.png",
         routine: "/imgs/man/routine.png",
         todo: "/imgs/man/ToDo.png",

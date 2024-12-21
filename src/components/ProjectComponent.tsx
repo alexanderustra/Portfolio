@@ -91,7 +91,7 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
                     <li key={index}>
                        
                         <div>
-                            <h4>{caracteristic.name}</h4>
+                            <h4 className={styles.descriptionTitle}>{caracteristic.name}</h4>
                             <p
                                 dangerouslySetInnerHTML={{
                                     __html: caracteristic.description

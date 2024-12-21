@@ -16,7 +16,8 @@ const textEs = {
         'Actualmente, también estoy aprendiendo diseño <strong>UX</strong>.'
     ],
     button: 'Mensaje',
-    phrase: '"En lo que sea, pero el mejor"'
+    phrase: '"En lo que sea, pero el mejor"',
+    cv:"https://docs.google.com/viewer?url=https://raw.githubusercontent.com/alexanderustra/Portfolio/main/public/Alexander_Ustra_CV_es.pdf"
 }
 const textEn = {
     subtitle: 'Front End Developer',
@@ -27,8 +28,9 @@ const textEn = {
         'Currently, I am also learning <strong>UX design</strong>.'
     ],    
     button: 'Contact Me',
-    phrase: '"In whatever it is, but the Best"'
-}
+    phrase: '"In whatever it is, but the Best"',
+    cv:"https://docs.google.com/viewer?url=https://raw.githubusercontent.com/alexanderustra/Portfolio/main/public/Alexander_Ustra_CV_en.pdf"
+} 
 
 export const AboutMe: React.FC<AboutMeProps> = ({ onContactClick ,language}) => {
     const [showAuthor,setShowAuthor] = useState(false)
@@ -51,13 +53,13 @@ export const AboutMe: React.FC<AboutMeProps> = ({ onContactClick ,language}) => 
 
                 <p>aleustrsa2004@gmail.com</p>
                 <div id="infoLinks">
+                
                 <a 
-                href={`https://docs.google.com/viewer?url=https://raw.githubusercontent.com/alexanderustra/Portfolio/main/public/Alexander_Ustra_CV-d.pdf`} 
+                href={textToUse.cv} 
                 target="_blank"
                 rel="noopener noreferrer">
                     <CvSvg />
                 </a>
-
                     <a href="https://www.linkedin.com/in/alexander-ustra" target="_blank"><LinkedinSvg/></a>
                     <a href="https://github.com/alexanderustra"><GitSvg/></a>
                 </div>
