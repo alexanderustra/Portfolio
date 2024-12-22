@@ -32,14 +32,14 @@ const projectImages = {
         clock: "/imgs/man/clock.png",
     },
     restaurant: {
-        carousel:[''],
+        carousel:['/imgs/rest/carousel/booking.webp','/imgs/rest/carousel/booking_confirmation.webp','/imgs/rest/carousel/order.webp','/imgs/rest/carousel/cart.webp','/imgs/rest/carousel/track_order.webp','/imgs/rest/carousel/track_order_2.webp'],
         home: "/imgs/rest/restaurant.webp",
         booking: "/imgs/rest/booking.webp",
         delivery: "/imgs/rest/delivery.webp",
         track: "/imgs/rest/track.webp",
     },
     montevideoDanger: {
-        carousel:[''],
+        carousel:['/imgs/md/carousel/1.webp','/imgs/md/carousel/2.webp','/imgs/md/carousel/3.webp','/imgs/md/carousel/4.webp'],
         home: "/imgs/md/montevideoDanger.webp",
         map: "/imgs/md/map.png",
     }
@@ -56,7 +56,7 @@ export const projectDataEn: Project[] = [
             github: "https://github.com/alexanderustra/Time-Management-App",
             tecs: ["typescript", "react", "css"],
             description: "Optimize your daily routines and activities with multiple features in one place.",
-            images:projectImages.timeManagement.carousel,
+            images:projectImages.montevideoDanger.carousel,
             caracteristics: [
                 {
                     name: "Routines",
@@ -90,7 +90,7 @@ export const projectDataEn: Project[] = [
             github: "https://github.com/alexanderustra/Reservation-App",
             tecs: ["typescript", "react", "css"],
             description: "A restaurant website simulation featuring reservations, delivery, discounts, and a shopping cart.",
-            images:projectImages.timeManagement.carousel,
+            images:projectImages.restaurant.carousel,
             caracteristics: [
                 {
                     name: "Reservations",
@@ -119,7 +119,7 @@ export const projectDataEn: Project[] = [
             github: "https://github.com/alexanderustra/MontevideoDanger",
             tecs: ["typescript", "react", "css", "javascript","api"],
             description: "A webpage dividing Montevideo into zones based on danger levels using official data.",
-        images:projectImages.timeManagement.carousel,
+        images:projectImages.montevideoDanger.carousel,
             caracteristics: [
                 {
                     name: "Map",
@@ -175,7 +175,7 @@ export const projectDataEs: Project[] = [
             github: "https://github.com/alexanderustra/Reservation-App",
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
-            images:projectImages.timeManagement.carousel,
+            images:projectImages.restaurant.carousel,
             caracteristics: [
                 {
                     name: "Reservas",
@@ -204,7 +204,7 @@ export const projectDataEs: Project[] = [
             github: "https://github.com/alexanderustra/MontevideoDanger",
             tecs: ["typescript", "react", "css", "javascript"],
             description: "Página que divide Montevideo en zonas de peligrosidad según datos oficiales.",
-            images:projectImages.timeManagement.carousel,
+            images:projectImages.montevideoDanger.carousel,
             caracteristics: [
                 {
                     name: "Mapa",
