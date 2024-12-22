@@ -56,7 +56,7 @@ export const projectDataEn: Project[] = [
             github: "https://github.com/alexanderustra/Time-Management-App",
             tecs: ["typescript", "react", "css"],
             description: "Optimize your daily routines and activities with multiple features in one place.",
-            images:projectImages.montevideoDanger.carousel,
+            images:projectImages.timeManagement.carousel,
             caracteristics: [
                 {
                     name: "Routines",

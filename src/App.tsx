@@ -168,7 +168,7 @@ const NavigationMenu = ()=>{
     if (activeView === 2) return
     setTimeout(() => {
       setActiveView((prev) => {
-        if (activeView === 4 || activeView === 6 || activeView === 8) return prev
+        if ([4, 6, 8].includes(activeView)) return prev;
         if(prev === 3)  return 4;
           return prev + 1
       });
@@ -176,14 +176,14 @@ const NavigationMenu = ()=>{
   };
   
   const swipeRight = () => {
-    if (activeView === 3 || activeView === 5 || activeView === 7) return
+    if ([3,5,7].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => (prev <= 0 ? 0 : prev - 1));
     }, 200);
   };
   
   const swipeDown = () => {
-    if (activeView === 1 ||activeView === 2 || activeView === 4 || activeView === 6 || activeView === 8) return; 
+    if ([1, 2, 4, 6, 8].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 0;
@@ -195,7 +195,7 @@ const NavigationMenu = ()=>{
   };
   
   const swipeUp = () => {
-    if (activeView === 1 ||activeView === 2 || activeView === 4 || activeView === 6 || activeView === 8) return; 
+    if ([1, 2, 4, 6, 8].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 3;
