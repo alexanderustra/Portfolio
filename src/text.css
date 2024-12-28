@@ -46,6 +46,7 @@ h3 {
     transition:.3s
 }
 p {
+    letter-spacing: .4px;
     margin: 0px;
     margin-top: 15px;
     font-size: 17px;

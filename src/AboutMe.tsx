@@ -10,7 +10,8 @@ interface AboutMeProps {
 const textEs = {
     subtitle:'Desarrollador Front End',
     description: [
-        'Me considero perfeccionista y competitivo, motivado por el deseo constante de superar desafíos y alcanzar la excelencia en todo lo que hago.',
+        'Me considero perfeccionista y competitivo, impulsado por el constante deseo de superar desafíos y lograr la excelencia en todo lo que emprendo.',
+        'He estado desarrollando aplicaciones web durante <strong> 2 años </strong>, trabajando en proyectos personales que demuestran mi capacidad para crear diseños limpios, eficientes y fáciles de usar.',
         'Egresado de <a href = "https://jovenesaprogramar.edu.uy"  target="_blank" ><strong>Jóvenes a Programar</strong></a>, modalidad desarrollo web, y ampliando mis conocimientos de forma <strong>autodidacta</strong>.',
         'Cuento con experiencia en React.js, TypeScript, JavaScript, Node.js y Astro.',
         'Actualmente, también estoy aprendiendo diseño <strong>UX</strong>.'
@@ -23,6 +24,7 @@ const textEn = {
     subtitle: 'Front End Developer',
     description: [
         'I consider myself a perfectionist and competitive, driven by a constant desire to overcome challenges and achieve excellence in everything I do.',
+        'I have been developing web applications for <strong> 2 years </strong>, working on personal projects that showcase my ability to create clean, efficient, and user-friendly designs.',
         'Graduate of <a href = "https://jovenesaprogramar.edu.uy"  target="_blank" ><strong>Jóvenes a Programar</strong> </a>, specializing in web development, and continuously expanding my knowledge through <strong>self-learning</strong>.',
         'I have experience with React.js, TypeScript, JavaScript, Node.js, and Astro.',
         'Currently, I am also learning <strong>UX design</strong>.'
