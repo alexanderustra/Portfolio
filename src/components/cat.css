@@ -32,6 +32,32 @@
   top: -15%;
 animation: out .3s ;
 }
+@keyframes enter {
+  0% {
+    top: -15%;
+  }
+  50% {
+    top: 7%;
+    transform: scaleY(0.8);
+    left: 5%;
+  }
+  80% {
+    
+    top: 5%;
+  }
+  100%{
+    top: 7%;
+  }
+}
+
+@keyframes out{
+  0% {
+    top: 7%;
+  }
+  100%{
+    top: -15%;
+  }
+}
 
 /*--------------------------------*/
 .catColor {

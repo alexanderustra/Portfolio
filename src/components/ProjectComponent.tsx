@@ -3,7 +3,7 @@ import {projectDataEs} from '../../public/projectsData'
 import ImageCarousel from './Carousel';
 import styles from './project.module.css'
 //import { YouTubeEmbed } from './VideoProd';
-import { ApiSvg, CssSvg, FigmaSvg, JavaScriptSvg, ReactSvg, TypeScriptSvg } from './Svgs';
+import { ApiSvg, CssSvg, FigmaSvg, JavaScriptSvg, NodeSvg, ReactSvg, TypeScriptSvg } from './Svgs';
 interface ProjectProps {
     id: number;
     language:string
@@ -39,7 +39,8 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
         css: CssSvg,
         javascript: JavaScriptSvg,
         figma: FigmaSvg,
-        api:ApiSvg
+        api:ApiSvg,
+        node:NodeSvg
     };
 
     

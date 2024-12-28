@@ -6,6 +6,8 @@ import './App.css';
 
 import { Project, ProjectInfo } from './components/ProjectComponent';
 import { Cat } from './components/Cat';
+import NavigationMenu from './components/NavigationMenu';
+import { Slide } from './components/SlideAnimation';
 
 function App() {
   const initialView = parseInt(localStorage.getItem('activeView') || '0', 10);
@@ -35,59 +37,6 @@ function App() {
     return (
       <div id='loadingScreen' >
         <div id='reflex'></div>
-      </div>
-    )
-  }
-
-const NavigationMenu = ()=>{
-
-  const textEs = {
-    aboutMe:'Sobre Mi',
-    myWork: 'Proyectos',
-    contact: 'Contacto',
-    home:'Inicio',
-    previus:'Anterior',
-    projectInfo:'Descripción',
-    next:'Siguiente',
-    back:'Atrás'
-  }
-  const textEn = {
-    aboutMe:'About Me',
-    myWork: 'My Work',
-    contact: 'Contact',
-    home:'Home',
-    previus:'Previus',
-    projectInfo:'Project Info',
-    next:'Next',
-    back:'Back'
-  }
-
-  const textToUse = language === 'Es' ? textEs : textEn
-
-  const [text,setText] = useState({
-    top:'',
-    right:'',
-    bottom:'',
-    left:'',
-
-  })
-  useEffect(() => {
-    if (activeView === 0) setText({ top: '', right: textToUse.aboutMe, bottom: textToUse.myWork, left: '' });
-    if (activeView === 1) setText({ top: '', right: textToUse.contact, bottom: '', left: textToUse.home });
-    if (activeView === 2) setText({ top: '', right: '', bottom: '', left: textToUse.aboutMe });
-    if (activeView === 3) setText({ top: textToUse.home, right: textToUse.projectInfo, bottom: textToUse.next, left: '' });
-    if (activeView > 3) setText({ top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.next, left: '' });
-    if (activeView === 4 || activeView === 6 || activeView === 8) setText({ top: '', right: '', bottom: '', left: textToUse.back });
-    if (activeView === 7) setText({ top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.home, left: '' });
-  }, [activeView]);
-
-    return (
-      <div id='navigationMenu' className={activeView === 0 ? 'homeNavigationMenu' : ''}>
-        <h4 id='top' onClick={swipeDown}>{text.top}</h4>
-        <h4 id='right' onClick={swipeLeft}>{text.right}</h4>
-        <div id='circle' onClick={()=>setActiveView(0)}></div>
-        <h4 id='bottom' onClick={swipeUp}>{text.bottom}</h4>
-        <h4 id='left' onClick={swipeRight}>{text.left}</h4>
       </div>
     )
   }
@@ -128,13 +77,7 @@ const NavigationMenu = ()=>{
             }}>{textToUse.contact}</button>
         </div>
           <Cat />
-        <div id='slideAnimationDiv'>
-          <div id='topLine'></div>
-          <div id='rightLine'>Slide</div>
-            <h3 id='text'>Slide</h3>
-          <div id='bottomLine'></div>
-          <div id='leftLine'>Slide</div>
-        </div>
+        <Slide/>
       </>
     )
   }
@@ -218,10 +161,13 @@ const NavigationMenu = ()=>{
     <div id={activeView === 0 || activeView === 1 || activeView === 2 ? 'container' : 'projectContainer'}  {...handlers}>
       {showLoading && <LoadingScreen/>}
        {renderView()}
-      { !showLoading && <NavigationMenu/>}
+      { !showLoading && <NavigationMenu
+          activeView={activeView}
+          setActiveView={setActiveView}
+          language={language}
+        />}
     </div>
   );
 }
-
 
 export default App
