@@ -44,71 +44,80 @@ const projectDetails= {
         carousel:['/imgs/md/carousel/1.webp','/imgs/md/carousel/2.webp','/imgs/md/carousel/3.webp','/imgs/md/carousel/4.webp'],
         home: "/imgs/md/montevideoDanger.webp",
         map: "/imgs/md/map.png",
+        input:'/imgs/md/input.webp',
         tecs: ["typescript", "react", "css", "javascript","node"],
+    },
+    eComerce: {
+        carousel:['/imgs/jap/home.webp','/imgs/jap/categories.webp','/imgs/jap/reviews.webp','/imgs/jap/product.webp'],
+        home: "/imgs/jap/home.webp",
+        cart: "/imgs/jap/cart.webp",
+        products: "/imgs/jap/products.webp",
+        profile: "/imgs/jap/profile.webp",
+        tecs: ["javascript","node","css"],
     }
 };
 
 // Array de proyectos con el tipo específico
 export const projectDataEn: Project[] = [
     {
-        id: 0,
-        name: "Time Management App",
-        img: projectDetails.timeManagement.home,
-        data: {
-            page: "https://alexanderustra.github.io/Time-Management-App/",
-            github: "https://github.com/alexanderustra/Time-Management-App",
-            tecs: projectDetails.timeManagement.tecs,
-            description: "Optimize your daily routines and activities with multiple features in one place.",
-            images:projectDetails.timeManagement.carousel,
-            caracteristics: [
+        "id": 0,
+        "name": "Time Management App",
+        "img": projectDetails.timeManagement.home,
+        "data": {
+            "page": "https://alexanderustra.github.io/Time-Management-App/",
+            "github": "https://github.com/alexanderustra/Time-Management-App",
+            "tecs": projectDetails.timeManagement.tecs,
+            "description": "Optimize time management with features such as creating routines, organizing tasks, tracking notes, and a visual clock to monitor daily progress.",
+            "images": projectDetails.timeManagement.carousel,
+            "caracteristics": [
                 {
-                    name: "Routines",
-                    img: projectDetails.timeManagement.routine,
-                    description: "Create routines by adding activities with descriptions and deadlines. Update their status as pending, completed, or not completed."
+                    "name": "Routines",
+                    "img": projectDetails.timeManagement.routine,
+                    "description": "Create routines by adding activities with descriptions and deadlines. Each activity’s status can be updated as pending, completed, or not completed. If the deadline is exceeded and the activity is not marked as completed, it is marked as failed until the next day."
                 },
                 {
-                    name: "ToDo",
-                    img: projectDetails.timeManagement.todo,
-                    description: "A classic ToDo list to organize your tasks with the option to mark them as completed. Future updates will include tracking time spent on tasks."
+                    "name": "ToDo",
+                    "img": projectDetails.timeManagement.todo,
+                    "description": "A classic ToDo to organize your tasks with the option to mark them as completed and delete them. (Planned feature: time tracking for each task)."
                 },
                 {
-                    name: "Notes",
-                    img: projectDetails.timeManagement.notes,
-                    description: "Create notes with options to pin, edit, or delete them effortlessly."
+                    "name": "Notes",
+                    "img": projectDetails.timeManagement.notes,
+                    "description": "Create notes with options to pin, edit, or delete them easily."
                 },
                 {
-                    name: "Clock",
-                    img: projectDetails.timeManagement.clock,
-                    description: "A visual bar showing real-time progress throughout the day."
+                    "name": "Clock",
+                    "img": projectDetails.timeManagement.clock,
+                    "description": "A visual bar made with CSS that shows the progress of the day in real-time."
                 }
             ]
         }
     },
     {
-        id: 1,
-        name: "Restaurant Website",
-        img: projectDetails.restaurant.home,
-        data: {
-            page: "https://alexanderustra.github.io/Reservation-App/",
-            github: "https://github.com/alexanderustra/Reservation-App",
-            tecs: projectDetails.restaurant.tecs,
-            description: "A restaurant website simulation featuring reservations, delivery, discounts, and a shopping cart.",
-            images:projectDetails.restaurant.carousel,
-            caracteristics: [
+        "id": 1,
+        "name": "Restaurant Website",
+        "img": projectDetails.restaurant.home,
+        "data": {
+            "page": "https://alexanderustra.github.io/Reservation-App/",
+            "github": "https://github.com/alexanderustra/Reservation-App",
+            "tecs": projectDetails.restaurant.tecs,
+            "description": "Simulates a restaurant website with features like reservations, delivery, discounts, and a shopping cart.",
+            "images": projectDetails.restaurant.carousel,
+            "caracteristics": [
                 {
-                    name: "Reservations",
-                    img: projectDetails.restaurant.booking,
-                    description: "Allows users to simulate reservations, collecting data and respecting realistic time constraints."
+                    "name": "Reservations",
+                    "img": projectDetails.restaurant.booking,
+                    "description": "Allows users to simulate a reservation. It requests key data and validates realistic times and dates."
                 },
                 {
-                    name: "Delivery",
-                    img: projectDetails.restaurant.delivery,
-                    description: "Offers a wide variety of dishes to add to the cart or buy directly."
+                    "name": "Delivery",
+                    "img": projectDetails.restaurant.delivery,
+                    "description": "Allows users to choose from a variety of dishes organized by categories. Users can add them to the cart, customize ingredients with real-time price adjustments, and benefit from automatically applied discounts."
                 },
                 {
-                    name: "Order Tracking",
-                    img: projectDetails.restaurant.track,
-                    description: "Generates an ID after purchase and shows real-time order progress."
+                    "name": "Order Tracking",
+                    "img": projectDetails.restaurant.track,
+                    "description": "Records the time when an order is placed and simulates the entire process: from order placement, preparation, to the delivery completion, providing real-time updates to the user."
                 }
             ]
         }
@@ -128,10 +137,44 @@ export const projectDataEn: Project[] = [
                     name: "Map",
                     img: projectDetails.montevideoDanger.map,
                     description: "Displays the 24 police precincts, coloring each zone based on the number of registered homicides."
+                },
+                {
+                    name: "Search by year",
+                    img: projectDetails.montevideoDanger.input,
+                    description: "The map page allows users to explore recorded data by selecting a specific year between 2013 and 2023. The map updates in real-time based on the selection."
                 }
             ]
         }
-    }
+    },
+    {
+        id: 3,
+        name: "JaP eCommerce",
+        img: projectDetails.eComerce.home,
+        data: {
+            page: "https://alexanderustra.github.io/JaP-eComerce/",
+            github: "https://github.com/alexanderustra/JaP-eComerce",
+            tecs: projectDetails.eComerce.tecs,
+            description: "Group project for Jóvenes a Programar, an eCommerce platform developed primarily with JavaScript and Node.js, using APIs to load data.",
+            images: projectDetails.eComerce.carousel,
+            caracteristics: [
+                {
+                    name: "Profile",
+                    img: projectDetails.eComerce.profile,
+                    description: "Allows users to register, log in, and manage their personal information. Each profile has a unique ID, with options to update data and change the profile picture. Additionally, it is integrated with a personalized shopping cart, ensuring that each action is linked to the authenticated user."
+                },
+                {
+                    name: "Products",
+                    img: projectDetails.eComerce.products,
+                    description: "Uses an API to dynamically load items, organizing them into various categories. Each product includes detailed information such as description, images, customer reviews, and specific data."
+                },
+                {
+                    name: "Cart",
+                    img: projectDetails.eComerce.cart,
+                    description: "Allows users to save items, adjust quantities, and manage products, including the option to remove them. Additionally, it calculates and displays the total price in real-time."
+                },
+            ]
+        }
+    }    
 ];
 
 export const projectDataEs: Project[] = [
@@ -143,18 +186,18 @@ export const projectDataEs: Project[] = [
             page: "https://alexanderustra.github.io/Time-Management-App/",
             github: "https://github.com/alexanderustra/Time-Management-App",
             tecs: projectDetails.timeManagement.tecs,
-            description: "Optimiza tus rutinas y actividades diarias con múltiples funciones en un solo lugar.",
+            description: "Optimiza la gestión del tiempo con funciones como la creación de rutinas, organización de tareas, seguimiento de notas y un reloj visual para monitorear el progreso diario.",
             images:projectDetails.timeManagement.carousel,
             caracteristics: [
                 {
                     name: "Rutinas",
                     img: projectDetails.timeManagement.routine,
-                    description: "Crea rutinas añadiendo actividades con descripción y hora límite. Actualiza su estado como pendiente, completada o no completada."
+                    description: "Crea rutinas añadiendo actividades con descripciones y hora límite. El estado de cada actividad puede actualizarse como pendiente, completada o no completada. Si se supera la hora límite y la actividad no se marcó como completada, se marca como fallida hasta el día siguiente."
                 },
                 {
                     name: "ToDo",
                     img: projectDetails.timeManagement.todo,
-                    description: "Un clásico ToDo para organizar tus tareas con opción de marcarlas como completadas. Planeo añadir registro de tiempo dedicado."
+                    description: "Un clásico ToDo para organizar tus tareas con opción de marcarlas como completadas y eliminarlas. Planeo añadir registro de tiempo dedicado."
                 },
                 {
                     name: "Notas",
@@ -164,7 +207,7 @@ export const projectDataEs: Project[] = [
                 {
                     name: "Reloj",
                     img: projectDetails.timeManagement.clock,
-                    description: "Una barra visual que muestra el progreso del día en tiempo real."
+                    description: "Una barra visual hecha con css que muestra el progreso del día en tiempo real."
                 }
             ]
         }
@@ -183,17 +226,17 @@ export const projectDataEs: Project[] = [
                 {
                     name: "Reservas",
                     img: projectDetails.restaurant.booking,
-                    description: "Permite simular reservas, solicitando datos y respetando horarios realistas."
+                    description: "Permite a los usuarios simular una reserva. Solicita datos clave y valida horarios y fechas realistas."
                 },
                 {
                     name: "Delivery",
                     img: projectDetails.restaurant.delivery,
-                    description: "Ofrece una amplia variedad de platos para agregar al carrito o comprar directamente."
+                    description: "Permite a los usuarios elegir entre una variedad de platos organizados por categorías. Los usuarios pueden añadirlos al carrito, personalizar ingredientes con ajustes de precio en tiempo real y beneficiarse de descuentos aplicados automáticamente."
                 },
                 {
                     name: "Seguimiento de órdenes",
                     img: projectDetails.restaurant.track,
-                    description: "Tras la compra, genera un ID y muestra el progreso de la orden en tiempo real."
+                    description: "Registra el tiempo al consolidar una compra y simula el proceso completo: desde la colocación de la orden, su preparación, hasta la finalización del delivery, brindando actualizaciones en tiempo real al usuario."
                 }
             ]
         }
@@ -213,7 +256,41 @@ export const projectDataEs: Project[] = [
                     name: "Mapa",
                     img: projectDetails.montevideoDanger.map,
                     description: "Muestra las 24 seccionales policiales, coloreando cada zona según el número de homicidios registrados."
+                },
+                {
+                    name: "Búsqueda por año",
+                    img: projectDetails.montevideoDanger.input,
+                    description: "permite a los usuarios explorar datos registrados seleccionando un año específico entre 2013 y 2023. El mapa se actualiza en tiempo real según la selección."
                 }
+            ]
+        }
+    },
+    {
+        id: 3,
+        name: "JaP eComerce",
+        img: projectDetails.eComerce.home,
+        data: {
+            page: "https://alexanderustra.github.io/JaP-eComerce/",
+            github: "https://github.com/alexanderustra/JaP-eComerce",
+            tecs: projectDetails.eComerce.tecs,
+            description: "proyecto grupal para Jovenes a Programar, se trada de un eComerce realizado con JavaScript y Node.Js principalmente, utilizando APIs para cargar los datos.",
+            images:projectDetails.eComerce.carousel,
+            caracteristics: [
+                {
+                    name: "Perfil",
+                    img: projectDetails.eComerce.profile,
+                    description: "Permite a los usuarios registrarse, iniciar sesión y gestionar su información personal. Cada perfil cuenta con un ID único, con opciones para actualizar datos y cambiar la imagen de perfil. Además, está integrado con un carrito de compras personalizado, asegurando que cada acción esté vinculada al usuario autenticado."
+                },
+                {
+                    name: "Productos",
+                    img: projectDetails.eComerce.products,
+                    description: "Utiliza una API para cargar dinámicamente los artículos, organizándolos en varias categorías. Cada producto incluye detalles completos, como descripción, imágenes, reseñas de clientes y datos específicos."
+                },
+                {
+                    name: "Carrito",
+                    img: projectDetails.eComerce.cart,
+                    description: "Permite a los usuarios guardar artículos, ajustar las cantidades y gestionar los productos, incluyendo la opción de eliminarlos. Además, calcula y muestra el precio total en tiempo real."
+                },
             ]
         }
     }

@@ -9,6 +9,11 @@ import { Cat } from './components/Cat';
 import NavigationMenu from './components/NavigationMenu';
 import { Slide } from './components/SlideAnimation';
 
+// al añadir otro proyecto se deben modificar:
+// el que active view retorne a 0 en el último proyecto
+// renderizar el proyecto nuevo con su id
+// los condicionales de la navegación
+
 function App() {
   const initialView = parseInt(localStorage.getItem('activeView') || '0', 10);
   const [showLoading,setShowLoading] = useState(false)
@@ -21,7 +26,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('activeView', JSON.stringify(activeView))
-    if(activeView > 8 ) {
+    //luego del último proyecto se regresa al homepage
+    if(activeView > 10 ) {
       setActiveView(0)
     }
     setShowLoading(true); 
@@ -102,6 +108,10 @@ function App() {
         return<Project id={2} language={language}/> ;
       case 8:
         return<ProjectInfo id={2} language={language}/> ;
+      case 9:
+        return<Project id={3} language={language}/> ;
+      case 10:
+        return<ProjectInfo id={3} language={language}/> ;
       default:
         return <Home/>;
     }
@@ -111,7 +121,8 @@ function App() {
     if (activeView === 2) return
     setTimeout(() => {
       setActiveView((prev) => {
-        if ([4, 6, 8].includes(activeView)) return prev;
+        //en la pantalla de info del proyecto solo se puede ir hacía atrás
+        if ([4, 6, 8,10].includes(activeView)) return prev;
         if(prev === 3)  return 4;
           return prev + 1
       });
@@ -119,26 +130,29 @@ function App() {
   };
   
   const swipeRight = () => {
-    if ([3,5,7].includes(activeView)) return;
+    //
+    if ([3,5,7,9].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => (prev <= 0 ? 0 : prev - 1));
     }, 200);
   };
   
   const swipeDown = () => {
-    if ([1, 2, 4, 6, 8].includes(activeView)) return;
+    //en la pantalla de info del proyecto solo se puede ir hacía atrás
+    if ([1, 2, 4, 6, 8,10].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 0;
         if (prev === 3) return 0;
-        if (prev === 5 || prev === 7) return prev - 2;
+        if (prev === 5 || prev === 7 || prev === 9) return prev - 2;
         return prev - 1;
       });
     }, 200);
   };
   
   const swipeUp = () => {
-    if ([1, 2, 4, 6, 8].includes(activeView)) return;
+    //en la pantalla de info del proyecto solo se puede ir hacía atrás
+    if ([1, 2, 4, 6, 8,10].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 3;
