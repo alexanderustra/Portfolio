@@ -59,8 +59,38 @@ const projectDetails= {
 
 // Array de proyectos con el tipo específico
 export const projectDataEn: Project[] = [
+    
     {
         "id": 0,
+        "name": "Restaurant Website",
+        "img": projectDetails.restaurant.home,
+        "data": {
+            "page": "https://alexanderustra.github.io/Reservation-App/",
+            "github": "https://github.com/alexanderustra/Reservation-App",
+            "tecs": projectDetails.restaurant.tecs,
+            "description": "Simulates a restaurant website with features like reservations, delivery, discounts, and a shopping cart.",
+            "images": projectDetails.restaurant.carousel,
+            "caracteristics": [
+                {
+                    "name": "Reservations",
+                    "img": projectDetails.restaurant.booking,
+                    "description": "Allows users to simulate a reservation. It requests key data and validates realistic times and dates."
+                },
+                {
+                    "name": "Delivery",
+                    "img": projectDetails.restaurant.delivery,
+                    "description": "Allows users to choose from a variety of dishes organized by categories. Users can add them to the cart, customize ingredients with real-time price adjustments, and benefit from automatically applied discounts."
+                },
+                {
+                    "name": "Order Tracking",
+                    "img": projectDetails.restaurant.track,
+                    "description": "Records the time when an order is placed and simulates the entire process: from order placement, preparation, to the delivery completion, providing real-time updates to the user."
+                }
+            ]
+        }
+    },
+    {
+        "id": 1,
         "name": "Time Management App",
         "img": projectDetails.timeManagement.home,
         "data": {
@@ -89,35 +119,6 @@ export const projectDataEn: Project[] = [
                     "name": "Clock",
                     "img": projectDetails.timeManagement.clock,
                     "description": "A visual bar made with CSS that shows the progress of the day in real-time."
-                }
-            ]
-        }
-    },
-    {
-        "id": 1,
-        "name": "Restaurant Website",
-        "img": projectDetails.restaurant.home,
-        "data": {
-            "page": "https://alexanderustra.github.io/Reservation-App/",
-            "github": "https://github.com/alexanderustra/Reservation-App",
-            "tecs": projectDetails.restaurant.tecs,
-            "description": "Simulates a restaurant website with features like reservations, delivery, discounts, and a shopping cart.",
-            "images": projectDetails.restaurant.carousel,
-            "caracteristics": [
-                {
-                    "name": "Reservations",
-                    "img": projectDetails.restaurant.booking,
-                    "description": "Allows users to simulate a reservation. It requests key data and validates realistic times and dates."
-                },
-                {
-                    "name": "Delivery",
-                    "img": projectDetails.restaurant.delivery,
-                    "description": "Allows users to choose from a variety of dishes organized by categories. Users can add them to the cart, customize ingredients with real-time price adjustments, and benefit from automatically applied discounts."
-                },
-                {
-                    "name": "Order Tracking",
-                    "img": projectDetails.restaurant.track,
-                    "description": "Records the time when an order is placed and simulates the entire process: from order placement, preparation, to the delivery completion, providing real-time updates to the user."
                 }
             ]
         }
@@ -178,8 +179,38 @@ export const projectDataEn: Project[] = [
 ];
 
 export const projectDataEs: Project[] = [
+    
     {
         id: 0,
+        name: "Web de Restaurante",
+        img: projectDetails.restaurant.home,
+        data: {
+            page: "https://alexanderustra.github.io/Reservation-App/",
+            github: "https://github.com/alexanderustra/Reservation-App",
+            tecs: projectDetails.restaurant.tecs,
+            description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
+            images:projectDetails.restaurant.carousel,
+            caracteristics: [
+                {
+                    name: "Reservas",
+                    img: projectDetails.restaurant.booking,
+                    description: "Permite a los usuarios simular una reserva. Solicita datos clave y valida horarios y fechas realistas."
+                },
+                {
+                    name: "Delivery",
+                    img: projectDetails.restaurant.delivery,
+                    description: "Permite a los usuarios elegir entre una variedad de platos organizados por categorías. Los usuarios pueden añadirlos al carrito, personalizar ingredientes con ajustes de precio en tiempo real y beneficiarse de descuentos aplicados automáticamente."
+                },
+                {
+                    name: "Seguimiento de órdenes",
+                    img: projectDetails.restaurant.track,
+                    description: "Registra el tiempo al consolidar una compra y simula el proceso completo: desde la colocación de la orden, su preparación, hasta la finalización del delivery, brindando actualizaciones en tiempo real al usuario."
+                }
+            ]
+        }
+    },
+    {
+        id: 1,
         name: "App de Gestión del Tiempo",
         img: projectDetails.timeManagement.home,
         data: {
@@ -208,35 +239,6 @@ export const projectDataEs: Project[] = [
                     name: "Reloj",
                     img: projectDetails.timeManagement.clock,
                     description: "Una barra visual hecha con css que muestra el progreso del día en tiempo real."
-                }
-            ]
-        }
-    },
-    {
-        id: 1,
-        name: "Web de Restaurante",
-        img: projectDetails.restaurant.home,
-        data: {
-            page: "https://alexanderustra.github.io/Reservation-App/",
-            github: "https://github.com/alexanderustra/Reservation-App",
-            tecs: projectDetails.restaurant.tecs,
-            description: "Simula la página de un restaurante con funciones como reservas, delivery, descuentos y carrito de compras.",
-            images:projectDetails.restaurant.carousel,
-            caracteristics: [
-                {
-                    name: "Reservas",
-                    img: projectDetails.restaurant.booking,
-                    description: "Permite a los usuarios simular una reserva. Solicita datos clave y valida horarios y fechas realistas."
-                },
-                {
-                    name: "Delivery",
-                    img: projectDetails.restaurant.delivery,
-                    description: "Permite a los usuarios elegir entre una variedad de platos organizados por categorías. Los usuarios pueden añadirlos al carrito, personalizar ingredientes con ajustes de precio en tiempo real y beneficiarse de descuentos aplicados automáticamente."
-                },
-                {
-                    name: "Seguimiento de órdenes",
-                    img: projectDetails.restaurant.track,
-                    description: "Registra el tiempo al consolidar una compra y simula el proceso completo: desde la colocación de la orden, su preparación, hasta la finalización del delivery, brindando actualizaciones en tiempo real al usuario."
                 }
             ]
         }
