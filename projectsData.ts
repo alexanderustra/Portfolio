@@ -27,8 +27,9 @@ const projectDetails= {
         carousel:['/imgs/man/carousel/menu.webp','/imgs/man/carousel/routine_modal.webp'],
         home: "/imgs/man/todoHome.png",
         routine: "/imgs/man/routine.png",
-        todo: "/imgs/man/ToDo.png",
+        timer: "/imgs/man/timer.webp",
         notes: "/imgs/man/notes.png",
+        activities:"/imgs/man/sumary.webp",
         clock: "/imgs/man/clock.png",
         tecs: ["typescript", "react", "css"],
     },
@@ -106,9 +107,14 @@ export const projectDataEn: Project[] = [
                     "description": "Create routines by adding activities with descriptions and deadlines. Each activity’s status can be updated as pending, completed, or not completed. If the deadline is exceeded and the activity is not marked as completed, it is marked as failed until the next day."
                 },
                 {
-                    "name": "ToDo",
-                    "img": projectDetails.timeManagement.todo,
-                    "description": "A classic ToDo to organize your tasks with the option to mark them as completed and delete them. (Planned feature: time tracking for each task)."
+                    "name": "Activities",
+                    "img": projectDetails.timeManagement.activities,
+                    "description": "It allows to create personalized activities and keep daily and weekly track of the time spent on each one."
+                },
+                {
+                    "name": "Timer",
+                    "img": projectDetails.timeManagement.timer,
+                    "description": "Conventional timer that allows you to set pauses and timelines, in addition to typical functions such as pause and alarms."
                 },
                 {
                     "name": "Notes",
@@ -226,9 +232,14 @@ export const projectDataEs: Project[] = [
                     description: "Crea rutinas añadiendo actividades con descripciones y hora límite. El estado de cada actividad puede actualizarse como pendiente, completada o no completada. Si se supera la hora límite y la actividad no se marcó como completada, se marca como fallida hasta el día siguiente."
                 },
                 {
-                    name: "ToDo",
-                    img: projectDetails.timeManagement.todo,
-                    description: "Un clásico ToDo para organizar tus tareas con opción de marcarlas como completadas y eliminarlas. Planeo añadir registro de tiempo dedicado."
+                    "name": "Actividades",
+                    "img": projectDetails.timeManagement.activities,
+                    "description": "Permite crear actividades personalizadas y mantener un seguimineto diario y semanal del tiempo dedicado a cada una."
+                },
+                {
+                    "name": "Timer",
+                    "img": projectDetails.timeManagement.timer,
+                    "description": "Timer convencional que permite establecer pausas y timelines, ademas de típicas funciones como pausa y alarmas."
                 },
                 {
                     name: "Notas",
