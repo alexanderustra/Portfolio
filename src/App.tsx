@@ -139,7 +139,6 @@ function App() {
   
   const swipeDown = () => {
     //en la pantalla de info del proyecto solo se puede ir hacía atrás
-    if ([1, 2, 4, 6, 8,10].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 0;
@@ -152,7 +151,6 @@ function App() {
   
   const swipeUp = () => {
     //en la pantalla de info del proyecto solo se puede ir hacía atrás
-    if ([1, 2, 4, 6, 8,10].includes(activeView)) return;
     setTimeout(() => {
       setActiveView((prev) => {
         if (prev === 0) return 3;
@@ -161,14 +159,18 @@ function App() {
     }, 200);
   };
 
+  const isSwipeable = ![1, 2, 4, 6, 8, 10].includes(activeView);
+
   const handlers = useSwipeable({
     onSwipedLeft: () => swipeLeft(),
     onSwipedRight: () => swipeRight(),
-    onSwipedUp: () => swipeUp(),
-    onSwipedDown: () => swipeDown(),
-    preventScrollOnSwipe: true, 
-    trackMouse: true, 
-    trackTouch: true 
+    ...(isSwipeable && {
+      onSwipedUp: () => swipeUp(),
+      onSwipedDown: () => swipeDown(),
+      preventScrollOnSwipe: true,
+    }),
+    trackMouse: true,
+    trackTouch: true,
   });
 
   return (
