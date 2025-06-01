@@ -55,8 +55,10 @@ const NavigationMenu = ({ activeView, setActiveView, language }: NavigationProps
     [4, { left: textToUse.back, top: '', right: '', bottom: '' }],
     [5, { top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.next, left: '' }],
     [6, { left: textToUse.back, top: '', right: '', bottom: '' }],
-    [7, { top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.home, left: '' }],
+    [7, { top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.next, left: '' }],
     [8, { left: textToUse.back, top: '', right: '', bottom: '' }],
+    [9, { top: textToUse.previus, right: textToUse.projectInfo, bottom: textToUse.next, left: '' }],
+    [10, { left: textToUse.back, top: '', right: '', bottom: '' }],
   ]);
 
   useEffect(() => {

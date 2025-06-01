@@ -11,6 +11,7 @@
     transform: translate(-50%);
     justify-content: center;
     align-items: center;
+    animation: appearAfterTransition .3s;
   }
   
   .navigationMenu *  , .homeNavigationMenu *{
@@ -75,5 +76,14 @@
     }
     100% {
         text-shadow:none;
+    }
+  }
+
+  @keyframes appearAfterTransition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
   }
