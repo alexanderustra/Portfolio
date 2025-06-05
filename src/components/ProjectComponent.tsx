@@ -14,6 +14,7 @@ const getProjectData = (id: number) => {
     const projectData = language === 'En' ? projectDataEn : projectDataEs;
     return projectData.find(data => data.id === id);
 };
+//Project home screen
 const Project:React.FC<ProjectProps> = ({ id }) =>{
 
     const info = getProjectData(id);
