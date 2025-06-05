@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.aleustra.dev"
+        }
+      ],
+      "destination": "https://aleustra.dev/:1",
+      "permanent": true
+    }
+  ]
+}
