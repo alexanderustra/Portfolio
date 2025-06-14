@@ -116,7 +116,7 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
                             ></p>
                         </div>
                         {!caracteristicsLoaded[index] && (
-                            <div className={styles.skeleton}></div>
+                            <div className={styles.caracteristicSkeleton}></div>
                         )}
                         <img 
                         className={styles.caracteristicImg} 
