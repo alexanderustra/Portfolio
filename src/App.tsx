@@ -9,12 +9,13 @@ import { Project, ProjectInfo } from './components/ProjectComponent';
 import { Cat } from './components/Cat';
 import NavigationMenu from './components/NavigationMenu';
 import { Slide } from './components/SlideAnimation';
-import { BeamNoteSvg, HeadsetSvg, Plant1Svg, Plant2Svg } from './components/Svgs';
+//import { BeamNoteSvg, HeadsetSvg, Plant1Svg, Plant2Svg } from './components/Svgs';
 
 // al añadir otro proyecto se deben modificar:
 // el que active view retorne a 0 en el último proyecto
 // renderizar el proyecto nuevo con su id
 // los condicionales de la navegación
+//
 
 function App() {
   const initialView = parseInt(localStorage.getItem('activeView') || '0', 10);
