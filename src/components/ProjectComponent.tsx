@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import {projectDataEn} from '../../public/projectsData'
 import {projectDataEs} from '../../public/projectsData'
 import ImageCarousel from './Carousel';
@@ -18,6 +19,7 @@ const getProjectData = (id: number) => {
 const Project:React.FC<ProjectProps> = ({ id }) =>{
 
     const info = getProjectData(id);
+     const [mainImgLoaded, setMainImgLoaded] = useState(false);
 
     if (!info) {
         return <div>Project not found</div>;
@@ -26,8 +28,11 @@ const Project:React.FC<ProjectProps> = ({ id }) =>{
     return (
         <div className={styles.projectTitleContainer} >
                 <h2>{info?.name}</h2>
-                <img src={`${info.img}`} alt="" />
-        </div>
+                 {!mainImgLoaded && <div className={styles.skeleton}></div>}
+                <img src={`${info.img}`} alt=""
+                style={{ display: mainImgLoaded ? 'block' : 'none' }}
+                onLoad={() => setMainImgLoaded(true)} />
+        </div>  
     )
 }
 const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
@@ -43,13 +48,23 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
         api:ApiSvg,
         node:NodeSvg
     };
-
     
     const info = getProjectData(id);
 
     if (!info) {
         return <div>Project not found</div>;
     }
+    const [caracteristicsLoaded, setCaracteristicsLoaded] = useState(
+        info ? Array(info.data.caracteristics.length).fill(false) : []
+    );
+
+    const handleCaracteristicLoad = (index: number) => {
+        setCaracteristicsLoaded((prev) => {
+        const updated = [...prev];
+        updated[index] = true;
+        return updated;
+        });
+    };
 
     /*
     const handleOpenImage = (url:any)=>{
@@ -100,7 +115,15 @@ const ProjectInfo:React.FC<ProjectProps> = ({ id }) =>{
                                 }}
                             ></p>
                         </div>
-                        <img className={styles.caracteristicImg} src={caracteristic.img} alt={caracteristic.name} />
+                        {!caracteristicsLoaded[index] && (
+                            <div className={styles.skeleton}></div>
+                        )}
+                        <img 
+                        className={styles.caracteristicImg} 
+                        src={caracteristic.img} 
+                        alt={caracteristic.name} 
+                        style={{ display: caracteristicsLoaded[index] ? 'block' : 'none' }}
+                        onLoad={() => handleCaracteristicLoad(index)} />
                     </li>
                 ) )}
                 </ul>

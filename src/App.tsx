@@ -3,11 +3,13 @@ import { Contact } from './Contact';
 import { AboutMe } from './AboutMe';
 import { useEffect, useState} from 'react';
 import './App.css';
+import './components/backgroundArt.css'
 
 import { Project, ProjectInfo } from './components/ProjectComponent';
 import { Cat } from './components/Cat';
 import NavigationMenu from './components/NavigationMenu';
 import { Slide } from './components/SlideAnimation';
+import { BeamNoteSvg, HeadsetSvg, Plant1Svg, Plant2Svg } from './components/Svgs';
 
 // al añadir otro proyecto se deben modificar:
 // el que active view retorne a 0 en el último proyecto
@@ -182,6 +184,12 @@ function App() {
           setActiveView={setActiveView}
           language={language}
         />}
+        {/*<div id='drawsBackground'>
+        <HeadsetSvg/>
+        <Plant1Svg/>
+        <Plant2Svg/>
+        <BeamNoteSvg/>
+      </div> */}
     </div>
   );
 }

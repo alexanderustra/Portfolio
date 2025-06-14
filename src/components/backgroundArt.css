@@ -1,0 +1,37 @@
+.artSvg {
+    scale: .7;
+    opacity: 1;
+}
+.artSvg:hover {
+    scale: .8;
+}
+/*#drawsBackground {
+
+}
+*/
+#headset {
+    position: absolute;
+    top: 10%;
+    left: 70%;
+}
+
+#plant1 {
+     top: 60%;
+    left: 0%;
+    position: absolute;
+}
+
+#plant2 {
+    top: 40%;
+    left: 50%;
+    position: absolute;
+}
+#beamNote {
+    position: absolute;
+     top: 10%;
+    left: 20%;
+    scale: 1.5;
+}
+#beamNote:hover {
+    scale: 1.8;
+}
